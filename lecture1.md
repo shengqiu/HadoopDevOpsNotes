@@ -16,7 +16,7 @@
 # zookeeper 端口
 - 2888: 用来看leader是否活着
 - 3888: 用来询问leader
-- :用来连接client
+- 2181:用来连接client
 
 
 # leader election
@@ -46,6 +46,17 @@
 
 
 
+
+# 如何部署：
+- 设置 binary位置
+- 设置 数据位置
+- 设置 quorum
+- 设置 log位置, 在bin event下面
+- 机器号 在data/myid里
+- getAcl 看权限
+- java.env 里要打开kerbros， 要配置好指向jaas.conf
+- 在java.env 里可以关闭Acl，用skipAcl
+- jaas.conf 用来配置kerbros的信息
 
 
 
