@@ -2,6 +2,7 @@
 - 通过总统选举，为整个集群选择leader，保证读写唯一性
 - 为zookeeper管理的集群，通过znode, 选择master
 - 一般存储集群共享的配置信息：比如微服务的地址
+- 只有leader可以写，正如数据库，原子操作，这样只有一个线程访问数据
 
 - leader: 集群领导， 对znode进行写操作
 - follower: 
